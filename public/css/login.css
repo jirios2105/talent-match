@@ -1,0 +1,230 @@
+
+#micontainer_register>span>img,#micontainer>span>img,#forgotten-container>span>img{
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: auto;
+  background: #19d87b;
+}
+
+/* Login container */
+#login-container,#register-container{
+
+  z-index: 1055;
+  position: fixed;
+  overflow: show;
+  width: 100%;
+  background: #655d5b73;;
+  height: 100%;
+  text-align:center;
+  display: none;
+}
+#micontainer,#micontainer_register{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align:left;
+  bottom: auto;
+  margin: auto;
+  width: 560px;
+  height: auto;
+  border-radius: 5px;
+  background: rgb(119, 70, 70);
+  box-shadow: 1px 1px 50px #000;
+  line-height: 100%;
+  z-index: 1055;
+  display: none;
+
+  
+}
+
+.close-btn{
+  position: absolute;
+  cursor: pointer;
+  font-family: 'Open Sans Condensed', sans-serif;
+  line-height: 18px;
+  top: 3px;
+  right: 3px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border-radius: 10px;
+  opacity: .2;
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -o-transition: all 2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.close-btn:hover{
+  opacity: .5;
+}
+
+/* Heading */
+#micontainer >h1,#micontainer_register>h1,#forgotten-container >h1{
+  font-family: 'Open Sans Condensed', sans-serif;
+  position: relative;
+  margin-top: 0px;
+  text-align: center;
+  font-size: 40px;
+  color: #ddd;
+
+  text-shadow: 3px 3px 10px #000;
+  
+}
+
+/* Inputs */
+#micontainer>form>a,#micontainer_register>form>a,
+#micontainer >form> input,#micontainer_register>form>input,#forgotten-container >form> input{
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-decoration: none;
+  position: relative;
+  width: 80%;
+  display: block;
+  margin: 9px auto;
+  font-size: 17px;
+  color: #fff;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  background: rgba(3,3,3,.1);
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -o-transition: all 2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+#micontainer >form>input:focus,#micontainer_register>form>input:focus, #forgotten-container>form>input::focus{
+  outline: none;
+  box-shadow: 3px 3px 10px #333;
+  background: rgba(3,3,3,.18);
+}
+
+/* Placeholders */
+::-webkit-input-placeholder {
+ color: #ddd;  }
+ :-moz-placeholder { /* Firefox 18- */
+   color: red;  }
+   ::-moz-placeholder {  /* Firefox 19+ */
+     color: red;  }
+     :-ms-input-placeholder {  
+       color: #333;  }
+
+       /* Link */
+       #micontainer >form> a,#micontainer_register>form>a{
+        font-family: 'Open Sans Condensed', sans-serif;
+        text-align: center;
+        padding: 4px 8px;
+        background: rgba(107,255,3,0.3);
+      }
+
+      #micontainer > a:hover,#micontainer_register>form>a:focus{
+        opacity: 0.7;
+      }
+
+      #remember-container{
+        position: relative;
+        margin: -5px 20px;
+      }
+      .checkbox {
+        position: relative;
+        cursor: pointer;
+        -webkit-appearance: none;
+        padding: 5px;
+        border-radius: 4px;
+        background: rgba(3,3,3,.2);
+
+        width: 16px;
+        height: 15px;
+      }
+
+      .checkbox:checked:active {
+        box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+      }
+
+      .checkbox:checked {
+        background: rgba(3,3,3,.4);
+        box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.5);
+        color: #fff;
+      }
+
+      .checkbox:checked:after {
+        content: '\2714';
+        font-size: 10px;
+        position: absolute;
+        top: 0px;
+        left: 4px;
+        color: #fff;
+      }
+
+      #remember{
+        position: absolute;
+        font-size: 13px;
+        font-family: 'Hind', sans-serif;
+        color: rgba(255,255,255,.5);
+        top: 7px;
+        left: 20px;
+      }
+
+      #forgotten{
+        position: absolute;
+        font-size: 12px;
+        font-family: 'Hind', sans-serif;
+        color: rgba(255,255,255,1);
+        right: 0px;
+        top: 8px;
+        cursor: pointer;
+        -webkit-transition: all 2s ease-in-out;
+        -moz-transition: all 2s ease-in-out;
+        -o-transition: all 2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+
+      }
+
+      #forgotten:hover{
+        color: rgba(255,255,255,.6);
+      }
+
+      #forgotten-container{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 260px;
+        height: 180px;
+        border-radius: 10px;
+        background: rgb(119, 70, 70);
+        box-shadow: 1px 1px 50px #000;
+        display: none;
+        z-index: 1055;
+        width: 560px;
+
+      }
+
+      .orange-btn{
+        background: rgba(87,198,255,.5);
+        font-family: 'Open Sans Condensed', sans-serif;
+        text-decoration: none;
+        position: relative;
+        width: 80%;
+        display: block;
+        margin: 9px auto;
+        font-size: 17px;
+        color: #fff;
+        padding: 8px;
+        border-radius: 6px;
+        border: none;
+
+        -webkit-transition: all 2s ease-in-out;
+        -moz-transition: all 2s ease-in-out;
+        -o-transition: all 2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+      }
+
+      #radioBtn .notActive{
+        color: #3276b1;
+        background: #fff;
+      }
