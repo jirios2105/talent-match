@@ -24,24 +24,23 @@
 
   <!-- bit of a bio; who are you? -->
   <div class="profile-bio">
+   <p>
+    Hola <b> {{$user->name}}</b> tu cuenta no esta activa, te invitamos a que vallas a tu coreo electronica para que la actives.
 
-    <p>
-      Hola <b> {{$user->name}}</b> tu cuenta no esta activa, te invitamos a que vallas a tu coreo electronica para que la actives.
-
-    </p>
-    <p>
-      Si no te ha llegado ningun mensaje de confirmación ó cuando das click en el link que se te envio te dice que tu cuenta a caducado, 
-      da <b><a href="#" onclick="event.preventDefault();document.getElementById('submit').submit();">click aqui</a></b> para reenviar el mensaje de confirmación
-    </p>
+  </p>
+  <p>
+    Si no te ha llegado ningun mensaje de confirmación ó cuando das click en el link que se te envio te dice que tu cuenta a caducado, 
+    da <b><a href="#" onclick="event.preventDefault();document.getElementById('submit').submit();">click aqui</a></b> para reenviar el mensaje de confirmación
+  </p>
 
 
-  </div>
-  <form action="{{route('code_confirmation',[$user->name,$user->email,$user->id])}}" id="submit" method="POST" role="form" class="hidden">
-    {{csrf_field()}}
-  </form>
+</div>
+<form action="{{route('code_confirmation',[$user->name,$user->email,$user->id])}}" id="submit" method="POST" role="form" class="hidden">
+  {{csrf_field()}}
+</form>
 
-  <!-- some social links to show off -->
-  
+<!-- some social links to show off -->
+
 </aside>
 
 <style type="text/css">

@@ -15,7 +15,7 @@
         <li><a href="#portfolio">{{trans('web.navbar2.portfolio')}}</a></li>
         <li><a href="#team">{{trans('web.navbar2.team')}}</a></li>
         <li><a href="#contact">{{trans('web.navbar2.contact')}}</a></li>
-        <li class="menu-has-children"><a href="">{{trans('web.navbar.lang') }}</a>
+        <li class="menu-has-children"><a href="#">{{trans('web.navbar.lang') }}</a>
           <ul>
             <li><a href="{{ url('lang', ['en']) }}">En</a></li>
             <li><a href="{{ url('lang', ['es']) }}">Es</a></li>
@@ -49,9 +49,9 @@
         </li>
         @else
 
-        <li class="menu-has-children"><a href="">{{ Auth::user()->name }}</a>
+        <li class="menu-has-children"><a href="#">{{ Auth::user()->name }}</a>
          <ul >
-          <li><a target="_blank" href="home"
+          <li><a  href="home"
            >
            {{ trans('web.navbar2.profil')}}
          </a>

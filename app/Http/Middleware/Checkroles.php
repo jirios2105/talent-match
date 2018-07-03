@@ -24,7 +24,7 @@ class Checkroles
             }
         }
 
-        return redirect('/');  
+     abort('403');
 
     }
 }

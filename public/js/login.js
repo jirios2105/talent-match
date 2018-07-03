@@ -47,53 +47,16 @@ var Login = function() {
   //is a private function return html of login
   var getHtml_register=function(){
 
-    // var html='<div id="register-container">\
-    // <div id="micontainer_register" class="">\
-    // <h1>Register</h1>\
-    // <span class="close-btn" onclick="btn_close_register()">\
-    // <img src="https://cdn4.iconfinder.com/data/icons/miu/22/circle_close_delete_-128.png"></img>\
-    // </span>\
-    // <form id="form-register-jira" action="'+attributes.form.action+'" method="'+attributes.form.method+'">\
-    // <div class="form-group">\
-    // <h3 style="color:black;" for="happy" class="col-sm-6 col-md-6  text-right">Registrarse como</h3>\
-    // <div class="col-sm-6 col-md-6">\
-    // <div class="input-group">\
-    // <div id="radioBtn" class="btn-group">\
-    // <a class="btn btn-primary btn-sm active"name="role_id" onclick="Rdioclick(this)" data-toggle="happy" value="3" data-title="3">Universidad</a>\
-    // <a class="btn btn-primary btn-sm notActive" name="role_id" onclick="Rdioclick(this)"  data-toggle="happy" value="1" data-title="1">Empresa</a>\
-    // </div>\
-    // <input type="hidden" name="role_id" value="1" id="happy">\
-    // </div>\
-    // </div>\
-    // </div>\
-    // '+attributes.token+'\
-    // <input type="text" name="name" value="" placeholder="'+attributes.name+'" required="required">\
-    // <div style="margin: 9px auto;width: 80%"><span id="error-name-register" style="text-align: center;font-size: 20px;color: black;"></span></div>\
-    // <input type="email" name="'+attributes.TextFirstInput.name+'" value="'+attributes.TextFirstInput.value+'" placeholder="'+attributes.TextFirstInput.placeholder+'" required="required">\
-    // <div style="margin: 9px auto;width: 80%"><span id="error-email-register" style="text-align: center;font-size: 20px;color: black;"></span></div>\
-    // <input type="password" name="'+attributes.TextSecondhInput.name+'" value="'+attributes.TextSecondhInput.value+'" placeholder="'+attributes.TextSecondhInput.placeholder+'" required="required">\
-    // <div style="margin: 9px auto;width: 80%"><span id="error-password-register" style="text-align: center;font-size: 20px;color: black;"></span></div>\
-    // <input type="password" name="password_confirmation" value="" placeholder="'+attributes.confirmPassword+'" required="required">\
-    // <div style="margin: 9px auto;width: 80%"><span id="error-password-confirmation-register" style="text-align: center;font-size: 20px;color: black;"></span></div>\
-    // <a type="submit" onclick="submit_register()" class="btn btn-primary">Register</a> \
-    // <div id="remember-container">\
-    // </div>\
-    // </form>\
-    // </div>\
-    // ';
-
-//
-
 
 var html='<div class="limiter" id="register-container" >\
 <div class="container-login100">\
 <div class="wrap-login100" style="padding: inherit;width: 40%;">\
-<span  class="close-btn2" onclick="btn_close_register()">\
+<span style=""  class="close-btn2" onclick="btn_close_register()">\
 <a >X</a>\
 </span>\
-<form style="width: 100%;" class="login100-form validate-form" id="form-register-jira" action="'+attributes.form.action+'" method="'+attributes.form.method+'">\
+<form style="width: 100%;" class="form validate-form" id="form-register-jira" action="'+attributes.form.action+'" method="'+attributes.form.method+'">\
 '+attributes.token+'\
-<span class="login100-form-title">\
+<span class="form-title">\
 Register\
 </span>\
 <div class="form-group">\
@@ -163,9 +126,9 @@ var getHtml = function() {
   <div class="login100-pic js-tilt" data-tilt>\
   <img src="img/img-01.png" alt="IMG">\
   </div>\
-  <form class="login100-form validate-form" id="form-jira" action="'+attributes.form.action+'" method="'+attributes.form.method+'">\
+  <form class="form validate-form" id="form-jira" action="'+attributes.form.action+'" method="'+attributes.form.method+'">\
   '+attributes.token+'\
-  <span class="login100-form-title">\
+  <span class="form-title">\
   Sig In\
   </span>\
   <div class="wrap-input100 validate-input" data-validate = "Valid '+attributes.TextFirstInput.placeholder+' is required: ex@abc.xyz">\
@@ -402,60 +365,4 @@ function Rdioclick(thiss) {
 
 
 
-
-
-function validate_form(input){
-    //$(t89,his).next().toggle();
-    var check = true;
-
-    //e.preventDefault();  
-    console.log('validar');
-    for(var i=0; i<input.length; i++) {
-      if(validate(input[i]) == false){
-        showValidate(input[i]);
-        check=false;
-      }
-    }
-
-    return check;  
-  }
-
-    /*==================================================================
-    [ Validate ]*/
-
-
-
-    
-
-    $(document).on("focus", ".validate-form .input100",function(e){
-
-      hideValidate(this);
-    });
-
-    function validate (input) {
-      if($(input).attr('type') == 'email' || $(input).attr('name') == 'email') {
-        if($(input).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) {
-          return false;
-        }
-      }
-      else {
-        if($(input).val().trim() == ''){
-          return false;
-        }
-      }
-    }
-
-    function showValidate(input) {
-      var thisAlert = $(input).parent();
-
-      $(thisAlert).addClass('alert-validate');
-    }
-
-    function hideValidate(input) {
-      var thisAlert = $(input).parent();
-
-      $(thisAlert).removeClass('alert-validate');
-    }
-    
-    
 

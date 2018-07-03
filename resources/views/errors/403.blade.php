@@ -1,1 +1,1 @@
-hola
+acceso restringido

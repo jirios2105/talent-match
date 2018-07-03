@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 @section('links')
 <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -14,18 +15,10 @@
     <div class="col-md-8 col-md-offset-2">
       <div class="panel panel-default">
         <div class="panel-heading">Dashboard</div>
+        <form action="" class="form validate-form"></form>
 
-        <div class="panel-body">
-          @if (session('status'))
-          <div class="alert alert-success">
-            {{ session('status') }}
-          </div>
-          @endif
-          <div class="wrap-input100 validate-input" data-validate="Name is requiered"><input class="input100 " type="text" name="name" value="" placeholder="Name"><span class="focus-input100"></span><span class="symbol-input100"><i class="fa fa-user" aria-hidden="true"></i></span></div>
-        </div>
-      </div>
     </div>
-  </div>
+</div>
 </div>
 
 @endsection
@@ -38,7 +31,7 @@
     type:'success',
     html:'Hola <b> {{Auth::user()->name}} </b> tu cuenta ha sido Confirmada',
     customClass: 'animated tada'
-  });
+});
 
   @endif
 

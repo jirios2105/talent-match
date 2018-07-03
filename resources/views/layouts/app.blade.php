@@ -12,8 +12,12 @@
   <title>{{ config('app.name', 'Laravel') }}</title>
   <!-- Styles -->
   <!-- Latest compiled and minified CSS -->
- 
+
   <link rel="stylesheet" href="{{asset('css/app.css')}}" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="{{asset('css/validate.css')}}" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{asset('css/form.css')}}" crossorigin="anonymous">
+  <link href="{{asset('lib/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
 
   <!-- Optional theme -->
 
@@ -25,7 +29,7 @@
   <div id="app">
     <!-- start nvar-->
     @yield('navbar')
- 
+
     <!-- end nvar-->
     @yield('sectionn')
 
@@ -43,6 +47,9 @@
 <script src="{{asset('js/app.js')}}"  crossorigin="anonymous"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
+<script type="{{asset('js/validate.js')}}"></script>
+
+
 <!-- start content script-->
 @yield('scripts')
 <!-- end content script-->

@@ -8,10 +8,10 @@
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
 
 <!-- Bootstrap CSS File -->
-<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
 
 <!-- Libraries CSS Files -->
-<link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
 <link href="lib/animate/animate.min.css" rel="stylesheet">
 <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
 <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -23,7 +23,7 @@
 
 
 <link href="{{asset('css/welcom.css')}}" rel="stylesheet">
-<link href="{{asset('css/login2.css')}}" rel="stylesheet">
+<link href="{{asset('css/login.css')}}" rel="stylesheet">
 
 @endsection
 
@@ -841,9 +841,7 @@
 
 
   @section('scripts')
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+ 
   <script src="lib/easing/easing.min.js"></script>
   <script src="lib/superfish/hoverIntent.js"></script>
   <script src="lib/superfish/superfish.min.js"></script>
@@ -858,15 +856,14 @@
   <script src="contactform/contactform.js"></script>
 
   <!-- Template Main Javascript File -->
-  <script src="sweetalert2.min.js"></script>
-  <script src="sweetalert2.all.min.js"></script>
+
   <!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
   
   <script src="{{asset('js/welcom.js')}}"></script>
 
 
   <script src="{{asset('js/login.js')}}"></script>
-  <script src="{{asset('js/login2.js')}}"></script>
+  <script src="{{asset('js/validate.js')}}"></script>
   <script src="tilt/tilt.jquery.min.js"></script>
   <script>
 
@@ -960,7 +957,7 @@
      if(validate_form($('.validate-input .input100'))){
 
        $.post($(this).attr('action'),$( this ).serialize(),function(result){
-
+console.log(result);
         swal({
           title: 'Cuenta Registrada',
           animation: false,

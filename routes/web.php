@@ -10,8 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::group(array( 'namespace' => 'Auth'), function()
-{
+Route::get('/', ['as'=>'welcome',function () {
+
+	return view('welcome');
+}]);
+
+
+Route::group(array( 'namespace' => 'Auth'), function(){
 	
 	Route::post('/register/enviar_codigo/{name}/{email}/{idUser}', ['as' => 'code_confirmation', 'uses' => 'RegisterController@send_code_confirmation']);
 
@@ -25,20 +30,23 @@ Route::get('lang/{lang}', function ($lang) {
 	'lang' => 'en|es'
 ]);
 
-Route::get('/', ['as'=>'welcome',function () {
-
-	return view('welcome');
-}]);
 
 
 
 
-Route::group(['university'], function()
+
+
+Route::group(['University'], function()
 {
-	Route::get('/universidad',['as'=>'university.index','uses'=> 'UniversityController@index']);
+	Route::get('/registrar_estudiante', ['as'=>'university.register_students','uses'=> 'UniversityController@showCreateStudentsForm']);
+	Route::post('/registrar_estudiante', ['as'=>'university.register_students','uses'=> 'UniversityController@createStudent']);
+
+
+	//Route::get('/universidad',['as'=>'university.index','uses'=> 'UniversityController@index']);
 	Route::post('/universidad',['as'=>'university.index','uses'=> 'UniversityController@index']);
 	Route::put('/universidad',['as'=>'university.index','uses'=> 'UniversityController@index']);
 });
+
 
 
 
